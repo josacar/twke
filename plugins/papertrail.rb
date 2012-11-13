@@ -1,3 +1,4 @@
+require 'papertrail'
 require 'cgi'
 
 class Plugin::PaperTrail < Plugin
