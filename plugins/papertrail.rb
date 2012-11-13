@@ -30,7 +30,7 @@ class Plugin::PaperTrail < Plugin
         formatted_events = ""
 
         begin
-          papertrail(act.search) do |event|
+          Papertrail::SearchQuery.search(act.search) do |event|
 
             # We want the most recent events at the top
             formatted_events = event + "\n" + formatted_events
